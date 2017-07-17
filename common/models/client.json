@@ -1,0 +1,71 @@
+{
+  "name": "Client",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "avatar": {
+      "type": "string"
+    },
+    "identification": {
+      "type": "string"
+    },
+    "legal_name": {
+      "type": "string",
+      "required": true
+    },
+    "comercial_name": {
+      "type": "string"
+    },
+    "phones": {
+      "type": [
+        "string"
+      ]
+    },
+    "website": {
+      "type": "string"
+    },
+    "contract_data": {
+      "type": "object"
+    },
+    "involved_budgets": {
+      "type": [
+        "string"
+      ]
+    },
+    "involved_projects": {
+      "type": [
+        "string"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {
+    "fiscal_address": {
+      "type": "hasOne",
+      "model": "Address",
+      "foreignKey": ""
+    },
+    "social_address": {
+      "type": "hasOne",
+      "model": "Address",
+      "foreignKey": ""
+    },
+    "contact_persons": {
+      "type": "hasMany",
+      "model": "Person",
+      "foreignKey": ""
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "DENY"
+    }
+  ],
+  "methods": {}
+}

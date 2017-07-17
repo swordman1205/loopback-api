@@ -1,0 +1,48 @@
+{
+  "name": "Service",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "reference_number": {
+      "type": "string",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "category": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "image": {
+      "type": "string"
+    },
+    "costs": {
+      "type": "object"
+    },
+    "duration": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "stages": {
+      "type": "hasMany",
+      "model": "Stage",
+      "foreignKey": ""
+    },
+    "providers": {
+      "type": "hasMany",
+      "model": "Provider",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

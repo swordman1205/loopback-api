@@ -1,0 +1,60 @@
+{
+  "name": "Task",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "reference_number": {
+      "type": "string",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "duration": {
+      "type": "number"
+    },
+    "start_date": {
+      "type": "date"
+    },
+    "end_date": {
+      "type": "date"
+    },
+    "progress": {
+      "type": "number"
+    },
+    "dependencies": {
+      "type": [
+        "string"
+      ]
+    },
+    "notes": {
+      "type": [
+        "string"
+      ]
+    },
+    "docs": {
+      "type": [
+        "string"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {
+    "job": {
+      "type": "hasOne",
+      "model": "Job",
+      "foreignKey": ""
+    },
+    "stage": {
+      "type": "belongsTo",
+      "model": "Stage",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

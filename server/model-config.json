@@ -1,0 +1,103 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db"
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Worker": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Third": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Provider": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Client": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Proposal": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Service": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Budget": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Project": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Departments": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Task": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Stage": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Address": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Person": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Job": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Log": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Container": {
+    "dataSource": "files",
+    "public": true
+  },
+  "Remotefile": {
+    "dataSource": null,
+    "public": true
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "name": "Job",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "goal": {
+      "type": "string",
+      "required": true
+    },
+    "functions": {
+      "type": [
+        "string"
+      ]
+    },
+    "required_training": {
+      "type": [
+        "string"
+      ]
+    },
+    "requirements": {
+      "type": [
+        "string"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {
+    "main_worker": {
+      "type": "hasOne",
+      "model": "Worker",
+      "foreignKey": ""
+    },
+    "substitute_worker": {
+      "type": "hasOne",
+      "model": "Worker",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

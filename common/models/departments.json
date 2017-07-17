@@ -1,0 +1,32 @@
+{
+  "name": "Departments",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "parent_department": {
+      "type": "string"
+    },
+    "related_departments": {
+      "type": [
+        "string"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {
+    "jobs": {
+      "type": "hasMany",
+      "model": "Job",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

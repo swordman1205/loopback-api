@@ -1,0 +1,50 @@
+{
+  "name": "Proposal",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "reference_number": {
+      "type": "string",
+      "required": true
+    },
+    "meeting_place": {
+      "type": "string"
+    },
+    "meeting_purpose": {
+      "type": "string"
+    },
+    "topics": {
+      "type": [
+        "string"
+      ]
+    },
+    "derived_tasks": {
+      "type": [
+        "string"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {
+    "client": {
+      "type": "belongsTo",
+      "model": "Client",
+      "foreignKey": ""
+    },
+    "author": {
+      "type": "hasOne",
+      "model": "Person",
+      "foreignKey": ""
+    },
+    "assistants": {
+      "type": "hasMany",
+      "model": "Person",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

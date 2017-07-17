@@ -1,0 +1,77 @@
+{
+  "name": "Project",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "reference_number": {
+      "type": "string",
+      "required": true
+    },
+    "status": {
+      "type": "string",
+      "required": true,
+      "default": "active"
+    },
+    "activation_date": {
+      "type": "date",
+      "required": true
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "briefing": {
+      "type": "string"
+    },
+    "docs": {
+      "type": [
+        "string"
+      ]
+    },
+    "images": {
+      "type": [
+        "string"
+      ]
+    },
+    "agreement": {
+      "type": [
+        "string"
+      ]
+    },
+    "notes": {
+      "type": [
+        "string"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {
+    "thirds": {
+      "type": "hasMany",
+      "model": "Third",
+      "foreignKey": ""
+    },
+    "workers": {
+      "type": "hasMany",
+      "model": "Worker",
+      "foreignKey": ""
+    },
+    "services": {
+      "type": "embedsMany",
+      "model": "Service",
+      "property": "services"
+    },
+    "tasks": {
+      "type": "hasMany",
+      "model": "Task",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

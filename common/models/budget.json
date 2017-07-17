@@ -1,0 +1,78 @@
+{
+  "name": "Budget",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "reference_number": {
+      "type": "string",
+      "required": true
+    },
+    "status": {
+      "type": "string",
+      "required": true,
+      "default": "pending"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "briefing": {
+      "type": "string"
+    },
+    "docs": {
+      "type": [
+        "string"
+      ]
+    },
+    "images": {
+      "type": [
+        "string"
+      ]
+    },
+    "presentation_date": {
+      "type": "date",
+      "required": true
+    },
+    "acceptation_date": {
+      "type": "date"
+    },
+    "deactivation_date": {
+      "type": "date"
+    },
+    "agreement": {
+      "type": [
+        "string"
+      ]
+    },
+    "notes": {
+      "type": [
+        "string"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {
+    "client": {
+      "type": "belongsTo",
+      "model": "Client",
+      "foreignKey": ""
+    },
+    "proposal": {
+      "type": "belongsTo",
+      "model": "Proposal",
+      "foreignKey": ""
+    },
+    "services": {
+      "type": "embedsMany",
+      "model": "Service",
+      "property": "services"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,47 @@
+{
+  "name": "Third",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "avatar": {
+      "type": "string"
+    },
+    "identification": {
+      "type": "string"
+    },
+    "legal_name": {
+      "type": "string",
+      "required": true
+    },
+    "phones": {
+      "type": [
+        "string"
+      ]
+    },
+    "fiscal_address": {
+      "type": "object"
+    },
+    "social_address": {
+      "type": "object"
+    },
+    "website": {
+      "type": "string"
+    },
+    "contract_data": {
+      "type": "object"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "contact_persons": {
+      "type": "hasMany",
+      "model": "Person",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

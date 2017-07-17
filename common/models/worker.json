@@ -1,0 +1,66 @@
+{
+  "name": "Worker",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "active": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    },
+    "avatar": {
+      "type": "string"
+    },
+    "identification": {
+      "type": "object",
+      "required": true
+    },
+    "full_name": {
+      "type": "string",
+      "required": true
+    },
+    "language": {
+      "type": "string",
+      "required": true
+    },
+    "phones": {
+      "type": [
+        "object"
+      ]
+    },
+    "personal_data": {
+      "type": "object"
+    },
+    "company_data": {
+      "type": "object"
+    },
+    "contract_data": {
+      "type": "object"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "tasks": {
+      "type": "hasMany",
+      "model": "Task",
+      "foreignKey": ""
+    },
+    "projects": {
+      "type": "hasMany",
+      "model": "Project",
+      "foreignKey": ""
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

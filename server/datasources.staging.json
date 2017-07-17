@@ -1,0 +1,20 @@
+{
+  "db": {
+    "host": "ec2-52-209-208-113.eu-west-1.compute.amazonaws.com",
+    "port": 27017,
+    "database": "cooksystem",
+    "name": "db",
+    "connector": "mongodb",
+    "server": {
+      "auto_reconnect": true,
+      "reconnectTries": 100,
+      "reconnectInterval": 1000
+    }
+  },
+  "files": {
+    "name": "files",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "./storage"
+  }
+}
